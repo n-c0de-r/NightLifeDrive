@@ -6,12 +6,10 @@ public class GameOverMenu : MonoBehaviour
 {
     public void MainMenuFromGameOver(){
         Time.timeScale = 0f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-2);
     }
 
     public void RestartFromGameOver(){ 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-2);
-        // Time.timeScale = 1f;
-        // paused = false; 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
 }
