@@ -7,7 +7,7 @@ public class looseLife : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision){
         GameObject collisionGameObject = collision.gameObject;
         if(collisionGameObject.name == "Car"){
-            life--;
+            // life--;
         }
     }
 }
