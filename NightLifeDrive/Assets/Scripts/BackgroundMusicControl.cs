@@ -5,23 +5,28 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class BackgroundMusicControl : MonoBehaviour
 {
-    
+    private AudioSource audioSource;
+    private int trackNumber = 0;
     [SerializeField] private AudioClip[] audioClipArray;
     // Start is called before the first frame update
-    IEnumerator Start()
+    void Start()
     {
-        AudioSource audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        StartCoroutine(PlayTrack(audioSource, trackNumber));
 
-        audio.Play();
-        yield return new WaitForSeconds(audio.clip.length);
-        audio.clip = audioClipArray[0];
-        audio.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private IEnumerator PlayTrack(AudioSource audio, int currentTrackNumber) {
+        audio.Play();
+        yield return new WaitForSeconds(audio.clip.length);
+        audio.clip = audioClipArray[currentTrackNumber];
+        audio.Play();
     }
     
 }
