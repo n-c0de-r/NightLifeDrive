@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.024553824, g: 0.0093467655, b: 0.0703815, a: 1}
+  m_IndirectSpecularColor: {r: 0.037112076, g: 0.012934145, b: 0.12581636, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSmoothness: 50
-  rotSmoothness: 0
+  rotSmoothness: 50
   moveOffset: {x: 0, y: 2, z: 5}
   rotOffset: {x: 0, y: 1.5, z: 0}
   carTarget: {fileID: 543450653536700288}
@@ -1895,7 +1895,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1672716482
 GameObject:
@@ -2653,9 +2653,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAcceleration: 300000
   brakeAcceleration: 50000
-  turnSensitvity: 0.5
-  maxSteeringAngle: 25
-  _centerOfMass: {x: 0, y: 0, z: 0}
+  turnSensitvity: 1
+  maxSteeringAngle: 35
+  _centerOfMass: {x: 0, y: 0, z: -0.5}
   wheels:
   - wheelModel: {fileID: 4232845721475807134}
     wheelCollider: {fileID: 1329018707}
