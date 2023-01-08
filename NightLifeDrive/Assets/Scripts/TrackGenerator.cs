@@ -54,7 +54,7 @@ public class TrackGenerator : MonoBehaviour
 
         direction = 0;
 
-        // 0 = straight line, +1 or -1 curve
+        // 0 = straight line, 1 curve
         if (index != 0) SetCurve();
         SpawnTile();
     }
@@ -69,14 +69,13 @@ public class TrackGenerator : MonoBehaviour
         direction = Random.Range(0, 2) * 2 - 1;
 
         // If the angle would be over 180 (+180 starting value) degrees, flip the direction
-        if (Mathf.Abs(angle + direction * 90) == 180)
+        if (Mathf.Abs(angle + direction * 90) >= 180)
         {
-            angle = -(angle - direction * 90);
             direction *= -1;
         }
 
         // Flip the tile along the x axis
-        nextTile.transform.localScale = new Vector3(direction, 1, 1);
+        nextTile.transform.localScale = new Vector3(2 * direction, 1, 2);
     }
 
     private void SpawnTile()
