@@ -7,7 +7,7 @@ public class LooseLife : MonoBehaviour
 {//in3d todo und trigger aus nach 1x crash
     [SerializeField] private float duration;
     //0.2 gut*5
-    [SerializeField] private int life;
+    [SerializeField] private int life;//public in movement
     [SerializeField] private Material blinkMaterial;
     // blinking sprite
     private Material material;
