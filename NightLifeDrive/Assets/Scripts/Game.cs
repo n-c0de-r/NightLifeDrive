@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
-    [SerializeField] public int life;
+    public Health health;
     // Start is called before the first frame update
     void Start()
     {
-        life = 3;
+        health = new Health();
+        health.setHealth(3);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(life==0){
+        if(health.getHealth()==0){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }

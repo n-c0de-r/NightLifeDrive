@@ -9,10 +9,12 @@ public class HealthUI : MonoBehaviour
     [SerializeField] private int health;
     
     [SerializeField] private GameObject[] heartImageArray;
+
+    [SerializeField] Health _health;
     // Start is called before the first frame update
     void Start()
     {
-        health = 3;
+        health = _health.getHealth();
     }
 
     // Update is called once per frame
