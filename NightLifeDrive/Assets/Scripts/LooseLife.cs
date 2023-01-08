@@ -7,7 +7,8 @@ public class LooseLife : MonoBehaviour
 {//in3d todo und trigger aus nach 1x crash
     [SerializeField] private float duration;
     //0.2 gut*5
-    [SerializeField] private int life;//public in movement
+    // [SerializeField] private int life;//public in movement
+    // public Health health;
     [SerializeField] private Material blinkMaterial;
     // blinking sprite
     private Material material;
@@ -35,7 +36,9 @@ public class LooseLife : MonoBehaviour
         {
             // Swap to the flashMaterial.
             material = blinkMaterial;
-            life--;
+            if(Game.health!=null){
+                Game.health.setHealth(Game.health.getHealth()-1);
+            }
 
             // Pause the execution of this function for "duration" seconds.
             yield return new WaitForSeconds(duration);

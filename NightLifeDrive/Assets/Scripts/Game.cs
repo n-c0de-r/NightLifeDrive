@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
-    public Health health;
+    public Health health = new Health();
     // Start is called before the first frame update
     void Start()
     {
-        health = new Health();
         health.setHealth(3);
     }
 

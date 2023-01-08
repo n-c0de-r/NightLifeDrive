@@ -6,21 +6,26 @@ using UnityEngine.UI;
 public class HealthUI : MonoBehaviour
 {
 
-    [SerializeField] private int health;
+    private Health health;
+    private int healthCount;
     
     [SerializeField] private GameObject[] heartImageArray;
 
-    [SerializeField] Health _health;
+    // [SerializeField] Health _health;
     // Start is called before the first frame update
     void Start()
     {
-        health = _health.getHealth();
+        // health = _health.getHealth();
     }
 
     // Update is called once per frame
     void Update()
     {
-        SetHealth(health);
+        health = Game.health;
+        if(health!=null){
+            healthCount = health.getHealth();
+            SetHealth(healthCount);
+        }
     }
 
     public void SetHealth(int currentHealth)
