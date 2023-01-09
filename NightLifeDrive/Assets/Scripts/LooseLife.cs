@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//source for idea:https://www.youtube.com/watch?v=9rZkiEyS66I
+//source for idea:https://www.youtube.com/watch?v=9rZkiEyS66I//source for Transform: https://www.youtube.com/watch?v=fBLpLZFNtVg
 
 public class LooseLife : MonoBehaviour
 {//in3d todo und trigger aus nach 1x crash
