@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
-    public Health health = new Health();
+    public static Health health = new Health();
     // Start is called before the first frame update
     void Start()
     {

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
-
     private Health health;
     private int healthCount;
     
@@ -22,10 +21,8 @@ public class HealthUI : MonoBehaviour
     void Update()
     {
         health = Game.health;
-        if(health!=null){
-            healthCount = health.getHealth();
-            SetHealth(healthCount);
-        }
+        healthCount = health.getHealth();
+        SetHealth(healthCount);
     }
 
     public void SetHealth(int currentHealth)

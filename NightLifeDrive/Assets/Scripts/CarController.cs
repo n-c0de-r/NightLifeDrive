@@ -34,16 +34,18 @@ public class CarController : MonoBehaviour
     public float steerInput;
 
     private Rigidbody carBody;
+    private Health health;
 
     void Start()
     {
-        life = 3;
+        health = Game.health;
         carBody = GetComponent<Rigidbody>();
         carBody.centerOfMass = _centerOfMass;
     }
 
     void Update()
     {
+        life = health.getHealth();
         GetInputs();
         AnimatedWheels();
     }
