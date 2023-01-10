@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
 {
     public static bool paused = false;
     public GameObject pauseMenu;
+    public GameObject volumeMenu;
 
     void Start(){
         pauseMenu.SetActive(false);
@@ -37,6 +38,10 @@ public class Pause : MonoBehaviour
     public void MainMenu(){
         Time.timeScale = 0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+    }
+
+    public void VolumeMenu(){
+        volumeMenu.SetActive(true);
     }
 
     public void Restart(){ 
