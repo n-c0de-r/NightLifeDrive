@@ -17,7 +17,7 @@ public class TrackGenerator : MonoBehaviour
     GameObject nextTile;
 
     private Vector3 spawnPosition;
-    [SerializeField]
+
     private int angle = 0;
 
     private int direction = 0;

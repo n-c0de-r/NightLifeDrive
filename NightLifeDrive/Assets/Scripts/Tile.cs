@@ -6,6 +6,8 @@ public class Tile : MonoBehaviour
 {
     TrackGenerator trackGenerator;
 
+    private const int deleteTime = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,6 @@ public class Tile : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, deleteTime);
     }
 }
