@@ -6,10 +6,13 @@ public class Tile : MonoBehaviour
 {
     TrackGenerator trackGenerator;
 
+    private const int deleteTime = 10;
+
     // Start is called before the first frame update
     void Start()
     {
-        trackGenerator = GameObject.FindObjectOfType<TrackGenerator>();
+        //trackGenerator = GameObject.FindObjectOfType<TrackGenerator>();
+        trackGenerator = this.transform.parent.gameObject.GetComponent<TrackGenerator>();
     }
 
     /// <summary>
@@ -27,6 +30,6 @@ public class Tile : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, deleteTime);
     }
 }
