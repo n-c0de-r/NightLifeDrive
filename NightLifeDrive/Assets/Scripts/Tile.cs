@@ -11,7 +11,8 @@ public class Tile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        trackGenerator = GameObject.FindObjectOfType<TrackGenerator>();
+        //trackGenerator = GameObject.FindObjectOfType<TrackGenerator>();
+        trackGenerator = this.transform.parent.gameObject.GetComponent<TrackGenerator>();
     }
 
     /// <summary>
