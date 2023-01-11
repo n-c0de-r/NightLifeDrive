@@ -5,28 +5,30 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class BackgroundMusicControl : MonoBehaviour
 {
-    private AudioSource audioSource;
-    private int trackNumber = 0;
+    private AudioSource audioSource; 
+    public int trackNumber = 0;
     [SerializeField] private AudioClip[] audioClipArray;
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        StartCoroutine(PlayTrack(audioSource, trackNumber));
-
+        //TODO: Shuffle Playlist here (or don't)
+        StartCoroutine(loopMusic(audioSource));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private IEnumerator loopMusic(AudioSource audio) {
+        while (true) {
+            audio.clip = audioClipArray[trackNumber];
+            audio.Play();
+            
+            yield return new WaitForSeconds(audio.clip.length);
 
-    private IEnumerator PlayTrack(AudioSource audio, int currentTrackNumber) {
-        audio.Play();
-        yield return new WaitForSeconds(audio.clip.length);
-        audio.clip = audioClipArray[currentTrackNumber];
-        audio.Play();
+            trackNumber++;
+
+            if (trackNumber >= audioClipArray.Length) {
+                trackNumber = 0;
+            }
+        }
     }
     
 }
