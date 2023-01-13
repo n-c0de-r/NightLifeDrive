@@ -6,7 +6,7 @@ public class Tile : MonoBehaviour
 {
     TrackGenerator trackGenerator;
 
-    private const int deleteTime = 10;
+    private const int deleteTime = 60;
 
     // Start is called before the first frame update
     void Start()
