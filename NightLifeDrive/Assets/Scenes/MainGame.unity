@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1998771823}
-  volumeMenu: {fileID: 0}
+  volumeMenu: {fileID: 1586363964}
 --- !u!114 &364252964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1586363966}
         m_TargetAssemblyTypeName: VolumeMenu, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
@@ -1684,7 +1684,6 @@ GameObject:
   - component: {fileID: 505126798}
   - component: {fileID: 505126797}
   - component: {fileID: 505126796}
-  - component: {fileID: 505126795}
   m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
@@ -1692,20 +1691,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &505126795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505126794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5ea3025e2dd42b4fa46fb598e5a235a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1998771823}
-  volumeMenu: {fileID: 1586363964}
 --- !u!114 &505126796
 MonoBehaviour:
   m_ObjectHideFlags: 0
