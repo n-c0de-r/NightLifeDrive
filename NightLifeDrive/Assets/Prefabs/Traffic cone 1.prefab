@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6566879529177469241}
   - component: {fileID: 3956625503362892316}
   - component: {fileID: 1284852184773279802}
+  - component: {fileID: 4010100345068904939}
+  - component: {fileID: 125884718874168228}
   m_Layer: 0
   m_Name: Traffic cone 1
   m_TagString: Untagged
@@ -111,5 +113,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5423dbc579a149946a6bef8349b8bca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.2
+  durationPerBlink: 0.5
+  blinkDuration: 20
   blinkMaterial: {fileID: 2100000, guid: 9ee57d79f386aee4281fe4f955fd774d, type: 2}
+--- !u!65 &4010100345068904939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621469832154968300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36953247, y: 0.37170416, z: 0.36953247}
+  m_Center: {x: 0, y: 0.18585208, z: 0}
+--- !u!54 &125884718874168228
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621469832154968300}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
