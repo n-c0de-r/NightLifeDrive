@@ -910,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 919132149350800702}
+      objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: duration
       value: 5
@@ -2298,7 +2298,7 @@ PrefabInstance:
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 919132149350800702}
+      objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: duration
       value: 5
@@ -4329,7 +4329,7 @@ PrefabInstance:
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 919132149350800702}
+      objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: duration
       value: 5
@@ -5718,7 +5718,6 @@ GameObject:
   - component: {fileID: 919132149350800700}
   - component: {fileID: 919132149350800701}
   - component: {fileID: 919132149350800703}
-  - component: {fileID: 919132149350800702}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -5775,18 +5774,6 @@ MonoBehaviour:
     axel: 1
   moveInput: 0
   steerInput: 1
---- !u!114 &919132149350800702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149350800698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae4bb9968bb8fd4ba67a26780f67593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &919132149350800703
 MonoBehaviour:
   m_ObjectHideFlags: 0

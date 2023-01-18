@@ -8,7 +8,8 @@ public class Game : MonoBehaviour
     public static Health health = new Health();
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        //this.health = health.gameObject.AddComponent<Health>();
         health.setHealth(3);
     }
 
@@ -20,3 +21,18 @@ public class Game : MonoBehaviour
         }
     }
 }
+// public class Health 
+// {
+//      private int health;
+
+//      public int getHealth()
+//      {
+//           return health;
+//      }
+
+//      public void setHealth(int newHealth)
+//      {
+//           health = newHealth;
+//      }
+    
+// }
