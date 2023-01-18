@@ -17,6 +17,10 @@ public class LooseLife : MonoBehaviour
     private Material originalMaterial;
     public static Coroutine blinkRoutine;
 
+    //Music
+    [SerializeField] private AudioSource endSoundEffect;
+    [SerializeField] private AudioSource triggerSoundEffect;
+
     void OnTriggerEnter(Collider collision){
         GameObject collisionGameObject = collision.gameObject;
         if(collisionGameObject.name == "Body" && blinkRoutine==null){
@@ -39,10 +43,18 @@ public class LooseLife : MonoBehaviour
             // Start the Coroutine, and store the reference for it.
             blinkRoutine = StartCoroutine(BlinkRoutine());
         }
+        // else{
+        //     triggerSoundEffect.Play();
+        // }
     }
      private IEnumerator BlinkRoutine()
         {
             // Swap to the flashMaterial.
+            if((Game.health.getHealth())==1) {
+                endSoundEffect.Play();
+            }else{
+                triggerSoundEffect.Play();
+            }
             carM.GetComponent<Renderer>().material = blinkMaterial;
             Game.health.setHealth(Game.health.getHealth()-1);
             // Pause the execution of this function for "duration" seconds.
