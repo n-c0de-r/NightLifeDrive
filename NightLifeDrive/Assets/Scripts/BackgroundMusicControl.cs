@@ -13,6 +13,8 @@ public class BackgroundMusicControl : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         //TODO: Shuffle Playlist here (or don't)
+        //ShufflePlayList();
+        //Idea -> start at a randomized start
         StartCoroutine(loopMusic(audioSource));
     }
 
@@ -20,7 +22,8 @@ public class BackgroundMusicControl : MonoBehaviour
         while (true) {
             audio.clip = audioClipArray[trackNumber];
             audio.Play();
-            
+
+            //yield return null;
             yield return new WaitForSeconds(audio.clip.length);
 
             trackNumber++;
@@ -29,6 +32,11 @@ public class BackgroundMusicControl : MonoBehaviour
                 trackNumber = 0;
             }
         }
+    }
+
+    private int ShufflePlaylist()
+    {
+        return 0;
     }
     
 }
