@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5116877227647375530}
   - component: {fileID: -3808020370757379673}
   m_Layer: 0
-  m_Name: MiniLine
+  m_Name: MiniStreet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
