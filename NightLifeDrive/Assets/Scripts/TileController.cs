@@ -8,9 +8,9 @@ public class TileController : MonoBehaviour
     [SerializeField]
     TrackGenerator trackGenerator;
 
-    //Transform midTile;
-
-    private const int deleteTime = 60;
+    private const float SPAWN_POINT = 2.5f;
+    private const int DELETE_TIME = 60;
+    private const int SCALE_FACTOR = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -18,25 +18,29 @@ public class TileController : MonoBehaviour
         trackGenerator = transform.parent.gameObject.GetComponent<TrackGenerator>();
     }
 
+    /// <summary>
+    /// Spawns an obstacle at certain predefined positions.
+    /// </summary>
+    /// <param name="obstacle">The Object to spawn.</param>
     public void SpawnObstacle(GameObject obstacle)
     {
+        GameObject obs;
+
         Transform midTile = transform.GetChild(transform.childCount - 1);
+        Vector3 spawnScale = new(SCALE_FACTOR, SCALE_FACTOR * 2, SCALE_FACTOR);
+        int xOffset = (int)PickPosition();
 
-        int xOffset = PickPosition();
+        obs = Instantiate(obstacle, midTile);
+        obs.transform.localPosition = new Vector3(-SPAWN_POINT + (SPAWN_POINT * xOffset), 0, 0);
+        obs.transform.localScale = spawnScale;
 
-        GameObject obs1, obs2;
-
-        obs1 = Instantiate(obstacle, midTile);
-        obs1.transform.localPosition = new Vector3(-2.5f * xOffset, 0, 0);
-        obs1.transform.localScale = new Vector3(2, 4, 2);
-
-        if (xOffset == 3)
+        if (xOffset == (int)Positions.SIDES)
         {
-            obs1.transform.localPosition = new Vector3(-2.5f, 0, 0);
+            obs.transform.localPosition = new Vector3(-SPAWN_POINT, 0, 0);
 
-            obs2 = Instantiate(obstacle, midTile);
-            obs2.transform.localPosition = new Vector3(2.5f, 0, 0);
-            obs2.transform.localScale = new Vector3(2, 2, 2);
+            obs = Instantiate(obstacle, midTile);
+            obs.transform.localPosition = new Vector3(SPAWN_POINT, 0, 0);
+            obs.transform.localScale = spawnScale;
         }
     }
 
@@ -55,13 +59,28 @@ public class TileController : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
-        Destroy(gameObject, deleteTime);
+        Destroy(gameObject, DELETE_TIME);
     }
 
-    private int PickPosition()
+    /// <summary>
+    /// Picks a position to spawn objects at.
+    /// 0 - on the left.
+    /// 1 - in the middle.
+    /// 2 - on the right.
+    /// 3 - left and right.
+    /// </summary>
+    /// <returns>Position value enum.</returns>
+    private Positions PickPosition()
     {
         int chance = Random.Range(0, 10);
+        return (Positions)(chance / 3);
+    }
 
-        return chance /= 3;
+    /// <summary>
+    /// Enumeration of positions for obstacles.
+    /// </summary>
+    public enum Positions
+    {
+        LEFT, MIDDLE, RIGHT, SIDES
     }
 }
