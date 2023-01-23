@@ -7,7 +7,7 @@ public class Pause : MonoBehaviour
 {
     public static bool paused = false;
     public GameObject pauseMenu;
-    public GameObject volumeMenu;
+    public GameObject settingsMenu;
 
     void Start(){
         pauseMenu.SetActive(false);
@@ -40,8 +40,8 @@ public class Pause : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
 
-    public void VolumeMenu(){
-        volumeMenu.SetActive(true);
+    public void SettingsMenu(){
+        settingsMenu.SetActive(true);
     }
 
     public void Restart(){ 
