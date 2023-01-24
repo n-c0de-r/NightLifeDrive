@@ -100,7 +100,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1720060338082379182, guid: ff2fbbfc1f1bdb24f9e0e4d41f558322, type: 3}
 --- !u!114 &1284852184773279802
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durationPerBlink: 0.5
-  blinkDuration: 20
+  blinkDuration: 10
   blinkMaterial: {fileID: 2100000, guid: 9ee57d79f386aee4281fe4f955fd774d, type: 2}
   endSoundEffect: {fileID: 332907375947857853}
   triggerSoundEffect: {fileID: -107795089652676084}
