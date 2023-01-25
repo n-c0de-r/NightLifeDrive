@@ -45,6 +45,7 @@ public class Pause : MonoBehaviour
     }
 
     public void Restart(){ 
+        LooseLife.blinkRoutine=null;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;

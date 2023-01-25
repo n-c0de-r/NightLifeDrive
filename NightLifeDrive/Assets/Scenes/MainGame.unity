@@ -924,6 +924,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -107795089652676084, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 332907375947857853, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: health
       value: 
@@ -1092,7 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1998771823}
-  settingsMenu: {fileID: 0}
+  settingsMenu: {fileID: 1306488584}
 --- !u!114 &364252964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2306,6 +2314,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -107795089652676084, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 332907375947857853, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: health
       value: 
@@ -2316,7 +2332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: blinkDuration
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: durationPerBlink
@@ -5833,6 +5849,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -107795089652676084, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 332907375947857853, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: health
       value: 

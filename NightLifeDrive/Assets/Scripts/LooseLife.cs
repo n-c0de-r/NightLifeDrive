@@ -16,16 +16,13 @@ public class LooseLife : MonoBehaviour
     private GameObject carM;
     private Material originalMaterial;
     public static Coroutine blinkRoutine;
-    [SerializeField] private float trigger = 0;
-    [SerializeField] private float nocouroutine = 0;
 
     //Music
     [SerializeField] private AudioSource endSoundEffect;
     [SerializeField] private AudioSource triggerSoundEffect;
-    //is endSoundEffect.isPlaying bei car Fragen und dann volume zurücksetzen, wenn false 
+    [SerializeField] private AudioSource triggerSoundEffectImmune;
 
     void OnTriggerEnter(Collider collision){
-        trigger++;
         GameObject collisionGameObject = collision.gameObject;
         if(collisionGameObject.name == "Body" && blinkRoutine==null){
             //sprite of Car
@@ -39,9 +36,9 @@ public class LooseLife : MonoBehaviour
             //save OG Material for later
             originalMaterial = material;
             blinkRoutine = StartCoroutine(BlinkRoutine());
-        }else{
+        }else if(collisionGameObject.name == "Body"){
             // triggerSoundEffect.volume = PlayerPrefs.GetFloat("musicVolume");
-            triggerSoundEffect.Play();// anderer Effekt oder andere Animation
+            triggerSoundEffectImmune.Play();// anderer Effekt oder andere Animation
         }
     }
      private IEnumerator BlinkRoutine()
