@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour
 {
     public static Health health = new Health();
+    [SerializeField] private AudioSource endSoundEffect;
     // Start is called before the first frame update
     void Start()
     {   
@@ -17,22 +18,14 @@ public class Game : MonoBehaviour
     void Update()
     {
         if(health.getHealth()==0){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            StartCoroutine(End());  
         }
     }
+
+    private IEnumerator End(){
+        // yield return new WaitForSeconds(endSoundEffect.time*2);
+        LooseLife.blinkRoutine=null;
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
 }
-// public class Health 
-// {
-//      private int health;
-
-//      public int getHealth()
-//      {
-//           return health;
-//      }
-
-//      public void setHealth(int newHealth)
-//      {
-//           health = newHealth;
-//      }
-    
-// }

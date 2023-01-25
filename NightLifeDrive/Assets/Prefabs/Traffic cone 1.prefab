@@ -116,8 +116,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durationPerBlink: 0.5
-  blinkDuration: 10
+  blinkDuration: 2
   blinkMaterial: {fileID: 2100000, guid: 9ee57d79f386aee4281fe4f955fd774d, type: 2}
+  trigger: 0
+  nocouroutine: 0
   endSoundEffect: {fileID: 332907375947857853}
   triggerSoundEffect: {fileID: -107795089652676084}
 --- !u!65 &4010100345068904939

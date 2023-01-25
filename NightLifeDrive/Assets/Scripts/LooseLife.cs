@@ -16,6 +16,8 @@ public class LooseLife : MonoBehaviour
     private GameObject carM;
     private Material originalMaterial;
     public static Coroutine blinkRoutine;
+    [SerializeField] private float trigger = 0;
+    [SerializeField] private float nocouroutine = 0;
 
     //Music
     [SerializeField] private AudioSource endSoundEffect;
@@ -23,6 +25,7 @@ public class LooseLife : MonoBehaviour
     //is endSoundEffect.isPlaying bei car Fragen und dann volume zurücksetzen, wenn false 
 
     void OnTriggerEnter(Collider collision){
+        trigger++;
         GameObject collisionGameObject = collision.gameObject;
         if(collisionGameObject.name == "Body" && blinkRoutine==null){
             //sprite of Car
@@ -35,13 +38,6 @@ public class LooseLife : MonoBehaviour
             }
             //save OG Material for later
             originalMaterial = material;
-            //  if (blinkRoutine != null)
-            // {
-            //     // In this case, we should stop it first.
-            //     // Multiple FlashRoutines the same time would cause bugs.
-            //     StopCoroutine(blinkRoutine);
-            // }
-            // Start the Coroutine, and store the reference for it.
             blinkRoutine = StartCoroutine(BlinkRoutine());
         }else{
             // triggerSoundEffect.volume = PlayerPrefs.GetFloat("musicVolume");
@@ -50,26 +46,12 @@ public class LooseLife : MonoBehaviour
     }
      private IEnumerator BlinkRoutine()
         {
-            //SoundEffect
-            // if(PlayerPrefs.GetFloat("musicVolume")>0.8f){
-            //     endSoundEffect.volume = 1f;
-            //     triggerSoundEffect.volume = 1f;
-            // }else if(PlayerPrefs.GetFloat("musicVolume")<0.1f){
-            //     endSoundEffect.volume = 0.1f;
-            //     triggerSoundEffect. volume = 0.1f;
-            // }else{
-            //     endSoundEffect.volume = PlayerPrefs.GetFloat("musicVolume")+0.2f;
-            //     triggerSoundEffect.volume = PlayerPrefs.GetFloat("musicVolume")+0.2f;
-            // }
-            // // Swap to the flashMaterial
-            // if((Game.health.getHealth())==1) {
-            //     endSoundEffect.Play();
-            // }else{
-            //     triggerSoundEffect.Play();
-            // }
-
+            if((Game.health.getHealth())==1) {
+                endSoundEffect.Play();
+            }else{
+                triggerSoundEffect.Play();
+            }
             //Material Effect
-
             carM.GetComponent<Renderer>().material = blinkMaterial;
             Game.health.setHealth(Game.health.getHealth()-1);
             // Pause the execution of this function for "duration" seconds.
@@ -84,7 +66,6 @@ public class LooseLife : MonoBehaviour
                 // After the pause, swap back to the original material.
                 carM.GetComponent<Renderer>().material = originalMaterial;
             }
-
             // Set the routine to null, signaling that it's finished.
             blinkRoutine = null;
         }

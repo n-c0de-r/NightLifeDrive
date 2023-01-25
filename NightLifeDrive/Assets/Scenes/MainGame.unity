@@ -2316,7 +2316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: blinkDuration
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1284852184773279802, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
       propertyPath: durationPerBlink
@@ -3674,6 +3674,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &1199519970 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 332907375947857853, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
+  m_PrefabInstance: {fileID: 753763312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1237561652
 GameObject:
   m_ObjectHideFlags: 0
@@ -8088,6 +8093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09d0d9a52c210428d4679beadc4a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endSoundEffect: {fileID: 1199519970}
 --- !u!23 &936506981706998385
 MeshRenderer:
   m_ObjectHideFlags: 0
