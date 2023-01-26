@@ -11,11 +11,9 @@ public class MusicHandler : MonoBehaviour
     void Awake()
     {
         if(!PlayerPrefs.HasKey("musicVolume")){
-            PlayerPrefs.SetFloat("musicVolume", 1);
-            Load();
-        }else{
-            Load();
+            PlayerPrefs.SetFloat("musicVolume", 0.5f);
         }
+        Load();
     }
 
     // Update is called once per frame

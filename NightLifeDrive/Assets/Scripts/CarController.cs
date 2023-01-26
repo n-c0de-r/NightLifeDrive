@@ -107,7 +107,6 @@ public class CarController : MonoBehaviour
             Quaternion rot;
             Vector3 pos;
             wheel.wheelCollider.GetWorldPose(out pos, out rot);
-            Game.points += rot.eulerAngles.x / 350;
             wheel.wheelModel.transform.position = pos;
             wheel.wheelModel.transform.rotation = rot;
         }
