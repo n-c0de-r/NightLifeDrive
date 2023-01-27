@@ -10,7 +10,15 @@ public class Game : MonoBehaviour
     private TextMeshProUGUI scoreText;
 
     public static Health health = new Health();
+
     [SerializeField] private AudioSource endSoundEffect;
+    
+    [SerializeField]
+    private TMP_InputField inputName;
+
+    [SerializeField]
+    private TextMeshPro namePlate;
+
 
     private float points;
     private float counterMultiplier;
@@ -23,6 +31,8 @@ public class Game : MonoBehaviour
     {
         //this.health = health.gameObject.AddComponent<Health>();
         health.setHealth(3);
+
+        inputName.text = namePlate.text;
         points = 0;
         counterMultiplier = minMultiplier;
     }
@@ -34,6 +44,8 @@ public class Game : MonoBehaviour
         {
             StartCoroutine(End());
         }
+
+        namePlate.text = inputName.text;
 
         if (Input.GetKey(KeyCode.W))
         {
