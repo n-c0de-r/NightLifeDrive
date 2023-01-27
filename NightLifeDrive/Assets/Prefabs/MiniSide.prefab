@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948b6d7b48f9bb24492cb965578d2e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects:
+  buildingArray:
   - {fileID: 919132149155446097, guid: 375b83e7f2dea9e4f815487ddde61a8b, type: 3}
   - {fileID: 919132149155446097, guid: 8ad2ecd281d364b45b200573ca6dbe06, type: 3}
   - {fileID: 919132149155446097, guid: 76b29e338e323dd4a81e393b5681fa64, type: 3}
