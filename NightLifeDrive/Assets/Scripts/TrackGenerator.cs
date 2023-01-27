@@ -6,58 +6,47 @@ using UnityEngine;
 public class TrackGenerator : MonoBehaviour
 {
     [SerializeField]
-    private TrackGenerator track;
-
-    [SerializeField]
-    private TileController tileController;
-
-    [SerializeField]
     private GameObject[] trackTiles;
 
     [SerializeField]
-    private GameObject startTile;
+    private GameObject obstaclePrefab;
 
-    [SerializeField]
-    GameObject obstaclePrefab;
-
-    [SerializeField] [Range(1, 10)]
-    private int SPAWN_DISTANCE = 5;
+    [SerializeField] [Range(1, 3)]
+    private int spawnDistance = 1;
 
     private GameObject nextTile;
 
-    private Vector3 spawnPosition;
+    private TileController tileController;
 
-    private int spawnCounter = 0;
+    private Vector3 spawnPosition;
 
     private int angle = 0;
 
     private int direction = 0;
 
+    private int spawnCounter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        spawnCounter = ResetCounter(SPAWN_DISTANCE);
+        spawnCounter = ResetCounter(spawnDistance);
 
-        spawnPosition = startTile.transform.GetChild(0).transform.position;
+        nextTile = transform.GetChild(0).gameObject;
+        tileController = nextTile.GetComponent<TileController>();
+
+        spawnPosition = nextTile.transform.GetChild(0).transform.position;
         nextTile = trackTiles[0];
 
-        while (track.transform.childCount < 10) SpawnTile();
+        while (transform.childCount < 10) SpawnTile();
+        spawnCounter = ResetCounter(spawnDistance);
     }
 
-    /// <summary>
-    /// Just for testing.
-    /// </summary>
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            GenerateTile();
-        }
-
-        if (spawnCounter == 0)
+        if (spawnCounter <= 0)
         {
             tileController.SpawnObstacle(obstaclePrefab);
-            spawnCounter = ResetCounter(SPAWN_DISTANCE);
+            spawnCounter = ResetCounter(spawnDistance);
         }
     }
 
@@ -74,6 +63,7 @@ public class TrackGenerator : MonoBehaviour
 
         // 0 = straight line, 1 curve
         if (index != 0) SetCurve();
+
         SpawnTile();
     }
 
