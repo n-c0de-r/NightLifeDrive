@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.037112076, g: 0.012934145, b: 0.12581636, a: 1}
+  m_IndirectSpecularColor: {r: 0.037030913, g: 0.012893178, b: 0.12574404, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2680,7 +2680,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 995106914}
         m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: EndGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
