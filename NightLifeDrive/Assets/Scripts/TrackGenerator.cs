@@ -6,6 +6,9 @@ using UnityEngine;
 public class TrackGenerator : MonoBehaviour
 {
     [SerializeField]
+    private TrackGenerator track;
+
+    [SerializeField]
     private TileController tileController;
 
     [SerializeField]

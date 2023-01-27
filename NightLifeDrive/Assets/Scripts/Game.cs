@@ -30,8 +30,11 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health.getHealth()==0){
-            StartCoroutine(End());  
+        if (health.getHealth() == 0)
+        {
+            StartCoroutine(End());
+        }
+
         if (Input.GetKey(KeyCode.W))
         {
             counterMultiplier = Mathf.Clamp(counterMultiplier + Time.deltaTime, minMultiplier, maxMultiplier);
