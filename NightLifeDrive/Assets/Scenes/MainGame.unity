@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0.5
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6a028d7594a108c4db81bdca847f66bf, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 92b957ae79f035e49afc41fe3cec3d25, type: 2}
   m_HaloStrength: 0.815
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -875,7 +875,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.559, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1193,7 +1193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &364252963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1815,7 +1815,7 @@ RectTransform:
   - {fileID: 1963482201}
   - {fileID: 1146880330}
   m_Father: {fileID: 2086338226}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3825,31 +3825,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112793367}
   m_CullTransparentMesh: 1
---- !u!1 &1127057079 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 323348491115009164, guid: 606dbc69d2769ca4c9efe98b34cc42bd, type: 3}
-  m_PrefabInstance: {fileID: 271936044}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1127057081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127057079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1146880329
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,8 +7312,8 @@ RectTransform:
   m_Father: {fileID: 612020498}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.559, y: 0}
-  m_AnchorMax: {x: 0.559, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8212,6 +8187,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 908099071}
+  - {fileID: 480623912747083024}
   - {fileID: 493836400}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -9272,7 +9248,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 480623911285039440}
-  endSoundEffect: {fileID: 0}
   inputName: {fileID: 1478551344}
   namePlate: {fileID: 1279216357}
 --- !u!23 &936506981706998385

@@ -11,8 +11,6 @@ public class Game : MonoBehaviour
 
     public static Health health = new Health();
 
-    [SerializeField] private AudioSource endSoundEffect;
-    
     [SerializeField]
     private TMP_InputField inputName;
 
@@ -29,7 +27,6 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //this.health = health.gameObject.AddComponent<Health>();
         health.setHealth(3);
 
         inputName.text = namePlate.text;
@@ -72,24 +69,9 @@ public class Game : MonoBehaviour
     }
 
     private IEnumerator End(){
-        // yield return new WaitForSeconds(endSoundEffect.time*2);
         LooseLife.blinkRoutine=null;
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
-// public class Health 
-// {
-//      private int health;
 
-//      public int getHealth()
-//      {
-//           return health;
-//      }
-
-//      public void setHealth(int newHealth)
-//      {
-//           health = newHealth;
-//      }
-
-// }
