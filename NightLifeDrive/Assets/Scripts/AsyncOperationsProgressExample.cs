@@ -12,6 +12,9 @@ using UnityEngine.UI;
 
 public class AsyncOperationsProgressExample : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject splashImage;
+
     private bool startGame = false;
     public Button playButton;
 
@@ -50,6 +53,7 @@ public class AsyncOperationsProgressExample : MonoBehaviour
                 //m_Text.text = "Press the space bar to continue";
                 //Wait to you press the space key to activate the Scene
                 this.playButton.interactable = true;
+                splashImage.SetActive(false);
                 if (this.startGame)
                     //Activate the Scene
                     asyncOperation.allowSceneActivation = true;

@@ -1520,7 +1520,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Myran Arbosa
+  m_text: U-Knight
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.85
+  m_fontSize: 20.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2553,6 +2553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a099db48c6def47b22c65f891d75f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 0
   maxAcceleration: 300000
   brakeAcceleration: 50000
   turnSensitvity: 0.5
