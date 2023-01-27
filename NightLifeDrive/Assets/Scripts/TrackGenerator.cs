@@ -38,7 +38,7 @@ public class TrackGenerator : MonoBehaviour
         spawnPosition = startTile.transform.GetChild(0).transform.position;
         nextTile = trackTiles[0];
 
-        while (transform.childCount < 5) SpawnTile();
+        while (track.transform.childCount < 10) SpawnTile();
     }
 
     /// <summary>

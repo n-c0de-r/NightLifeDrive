@@ -57,7 +57,7 @@ public class CarController : MonoBehaviour
         Brake();
     }
 
-    void GetInputs() 
+    void GetInputs()
     {
         moveInput = Input.GetAxis("Vertical");
         steerInput = Input.GetAxis("Horizontal");
@@ -73,7 +73,7 @@ public class CarController : MonoBehaviour
 
     void Steer()
     {
-        foreach(var wheel in wheels)
+        foreach (var wheel in wheels)
         {
             if (wheel.axel == Axel.Front)
             {
@@ -86,22 +86,23 @@ public class CarController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) || !Input.anyKey)
         {
-            foreach(var wheel in wheels)
+            foreach (var wheel in wheels)
             {
                 wheel.wheelCollider.brakeTorque = brakeAcceleration * Time.deltaTime;
             }
         }
         else
         {
-            foreach(var wheel in wheels) {
+            foreach (var wheel in wheels)
+            {
                 wheel.wheelCollider.brakeTorque = 0;
             }
         }
     }
 
-    void AnimatedWheels() 
+    void AnimatedWheels()
     {
-        foreach(var wheel in wheels)
+        foreach (var wheel in wheels)
         {
             Quaternion rot;
             Vector3 pos;
