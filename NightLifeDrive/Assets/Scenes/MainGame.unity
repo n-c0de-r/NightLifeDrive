@@ -4356,7 +4356,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.45
+  m_fontSize: 18.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9179,6 +9179,7 @@ GameObject:
   - component: {fileID: 919132149350800700}
   - component: {fileID: 919132149350800701}
   - component: {fileID: 919132149350800703}
+  - component: {fileID: 919132149350800704}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -9195,8 +9196,8 @@ Rigidbody:
   m_GameObject: {fileID: 919132149350800698}
   serializedVersion: 2
   m_Mass: 1000
-  m_Drag: 0.05
-  m_AngularDrag: 0.5
+  m_Drag: 0.2
+  m_AngularDrag: 0.7
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -9215,9 +9216,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 0
-  maxAcceleration: 200000
-  brakeAcceleration: 100000
-  turnSensitvity: 1
+  maxAcceleration: 150000
+  brakeAcceleration: 150000
+  turnSensitvity: 0.5
   maxSteeringAngle: 25
   _centerOfMass: {x: 0, y: 0, z: 0}
   wheels:
@@ -9250,6 +9251,18 @@ MonoBehaviour:
   scoreText: {fileID: 480623911285039440}
   inputName: {fileID: 1478551344}
   namePlate: {fileID: 1279216357}
+--- !u!114 &919132149350800704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149350800698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4818bd03c761b8449bdafead9772efa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &936506981706998385
 MeshRenderer:
   m_ObjectHideFlags: 0
