@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.037112076, g: 0.012934145, b: 0.12581636, a: 1}
+  m_IndirectSpecularColor: {r: 0.027873326, g: 0.018073658, b: 0.05289385, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 8ea469e13b965e04c82b8c8eb5eb8a7e, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: e79503ff9e6117d45ae253c9ba9b5ae2, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: e594ff83aee98aa4cb7d87cfeb53387d, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -4654,6 +4654,18 @@ PrefabInstance:
     - target: {fileID: 3403269814840066738, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
       propertyPath: m_Name
       value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403269814840066740, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
+      propertyPath: m_Drag
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403269814840066740, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
+      propertyPath: m_Mass
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403269814840066741, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
+      propertyPath: turnSensitvity
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3403269814840066741, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
       propertyPath: maxAcceleration
