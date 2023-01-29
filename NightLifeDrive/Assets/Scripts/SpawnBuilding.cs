@@ -5,7 +5,7 @@ public class SpawnBuilding : MonoBehaviour
     [SerializeField]
     private GameObject[] buildingArray;
 
-    Quaternion startRotation = Quaternion.Euler(0, -90, 0);
+    Quaternion startRotation = Quaternion.Euler(0, 90, 0);
 
     // Start is called before the first frame update
     void Start()
