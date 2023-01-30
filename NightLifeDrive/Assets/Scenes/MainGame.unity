@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.037112076, g: 0.012934145, b: 0.12581636, a: 1}
+  m_IndirectSpecularColor: {r: 0.027873326, g: 0.018073658, b: 0.05289385, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 8ea469e13b965e04c82b8c8eb5eb8a7e, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: e79503ff9e6117d45ae253c9ba9b5ae2, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: e594ff83aee98aa4cb7d87cfeb53387d, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -964,7 +964,7 @@ PrefabInstance:
       objectReference: {fileID: 720301931}
     - target: {fileID: 8834117994656207397, guid: 606dbc69d2769ca4c9efe98b34cc42bd, type: 3}
       propertyPath: spawnDistance
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8834117994656207397, guid: 606dbc69d2769ca4c9efe98b34cc42bd, type: 3}
       propertyPath: SPAWN_DISTANCE
@@ -4654,6 +4654,18 @@ PrefabInstance:
     - target: {fileID: 3403269814840066738, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
       propertyPath: m_Name
       value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403269814840066740, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
+      propertyPath: m_Drag
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403269814840066740, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
+      propertyPath: m_Mass
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403269814840066741, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
+      propertyPath: turnSensitvity
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3403269814840066741, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
       propertyPath: maxAcceleration
@@ -9308,15 +9320,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 4
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9394,7 +9406,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 140, y: 40}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &480623911909476872
 MonoBehaviour:
@@ -9443,15 +9455,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9529,7 +9541,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 40}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &480623912747083024
 RectTransform:
@@ -9551,7 +9563,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -20, y: -20}
-  m_SizeDelta: {x: 240, y: 40}
+  m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &480623912747083025
 MonoBehaviour:
