@@ -9,20 +9,21 @@ public class Game : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scoreText;
 
-    public static Health health = new Health();
-
     [SerializeField]
     private TMP_InputField inputName;
 
     [SerializeField]
     private TextMeshPro namePlate;
 
+    public static Health health = new Health();
 
     private float points;
     private float counterMultiplier;
     private float minMultiplier = 0.1f;
     private float maxMultiplier = 10.0f;
     private int modMultiplier = 100;
+
+    private string defaultName = "U-KNIGHT";
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,19 @@ public class Game : MonoBehaviour
             StartCoroutine(End());
         }
 
-        namePlate.text = inputName.text;
+        if (health.getHealth() == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        if (!namePlate.text.Equals(inputName.text))
+            namePlate.text = inputName.text;
+
+        if (inputName.text == null || inputName.text.Equals(""))
+        {
+            inputName.text = defaultName;
+            namePlate.text = defaultName;
+        }
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -61,10 +74,6 @@ public class Game : MonoBehaviour
             modMultiplier *= 10;
         }
 
-        if (health.getHealth() == 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
         scoreText.text = points.ToString().Split(",")[0];
     }
 

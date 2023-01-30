@@ -5,18 +5,9 @@ using UnityEngine;
 /// </summary>
 public class TileController : MonoBehaviour
 {
-    [SerializeField]
-    TrackGenerator trackGenerator;
-
     private const float SPAWN_POINT = 2.5f;
     private const int DELETE_TIME = 60;
     private const int SCALE_FACTOR = 3;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        trackGenerator = transform.parent.gameObject.GetComponent<TrackGenerator>();
-    }
 
     /// <summary>
     /// Spawns an obstacle at certain predefined positions.
@@ -50,7 +41,11 @@ public class TileController : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        trackGenerator.GenerateTile();
+        if (other.name.Equals("Body"))
+        {
+            TrackGenerator trackGenerator = transform.parent.gameObject.GetComponent<TrackGenerator>();
+            trackGenerator.GenerateTile();
+        }
     }
 
     /// <summary>
@@ -59,7 +54,8 @@ public class TileController : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
-        Destroy(gameObject, DELETE_TIME);
+        if (other.name.Equals("Body"))
+            Destroy(gameObject, DELETE_TIME);
     }
 
     /// <summary>
