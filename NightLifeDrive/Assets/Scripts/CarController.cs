@@ -84,7 +84,7 @@ public class CarController : MonoBehaviour
     }
     void Brake()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space)|| !Input.anyKey)
         {
             foreach (var wheel in wheels)
             {

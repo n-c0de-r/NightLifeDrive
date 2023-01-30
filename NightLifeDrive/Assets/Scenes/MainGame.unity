@@ -4669,11 +4669,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3403269814840066741, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
       propertyPath: maxAcceleration
-      value: 15000
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 3403269814840066741, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
       propertyPath: brakeAcceleration
-      value: 8000
+      value: 120000
       objectReference: {fileID: 0}
     - target: {fileID: 5832910855731237620, guid: 1781cd69877925640ab4181e7cebf3d8, type: 3}
       propertyPath: inputName
