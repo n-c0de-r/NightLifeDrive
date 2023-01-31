@@ -2993,7 +2993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2cbffcefd427e24e95b7463135a59fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
   inputName: {fileID: 1379319619}
 --- !u!4 &788138568
 Transform:
