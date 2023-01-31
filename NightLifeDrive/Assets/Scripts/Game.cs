@@ -30,6 +30,14 @@ public class Game : MonoBehaviour
     {
         health.setHealth(3);
 
+        DontDestroyOnLoad(NameHandler.nameHandler);
+
+        if(NameHandler.InputName != null)
+            namePlate.text = NameHandler.InputName;
+
+        if(NameHandler.PlayerName != null)
+            namePlate.text = NameHandler.PlayerName;
+
         inputName.text = namePlate.text;
         points = 0;
         counterMultiplier = minMultiplier;
@@ -49,7 +57,11 @@ public class Game : MonoBehaviour
         }
 
         if (!namePlate.text.Equals(inputName.text))
+        {
             namePlate.text = inputName.text;
+            NameHandler.InputName = inputName.text;
+            NameHandler.PlayerName = inputName.text;
+        }
 
         if (inputName.text == null || inputName.text.Equals(""))
         {
