@@ -6,17 +6,16 @@ using UnityEngine;
 /// to much simpler predefined rectangular track pieces:
 /// https://www.youtube.com/watch?v=p1odc--Ephk
 /// https://www.youtube.com/watch?v=mHn6kZ6qcM0
+/// https://youtube.com/playlist?list=PLvcJYjdXa962PHXFjQ5ugP59Ayia-rxM3
+/// https://www.youtube.com/playlist?list=PL0WgRP7BtOez8O7UAQiW0qAp-XfKZXA9W
 /// </summary>
 public class TrackGenerator : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] trackTiles;
 
-    [SerializeField]
-    private GameObject obstaclePrefab;
-
     [SerializeField] [Range(1, 3)]
-    private int spawnDistance = 1;
+    private int obstacleDistance = 1;
 
     private GameObject nextTile;
 
@@ -28,13 +27,11 @@ public class TrackGenerator : MonoBehaviour
 
     private int direction = 0;
 
-    private int spawnCounter = 0;
+    private int obstacleCounter = 11;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnCounter = ResetCounter(spawnDistance);
-
         nextTile = transform.GetChild(0).gameObject;
         tileController = nextTile.GetComponent<TileController>();
 
@@ -42,15 +39,15 @@ public class TrackGenerator : MonoBehaviour
         nextTile = trackTiles[0];
 
         while (transform.childCount < 10) SpawnTile();
-        spawnCounter = ResetCounter(spawnDistance);
+        obstacleCounter = ResetCounter(obstacleDistance);
     }
 
     void Update()
     {
-        if (spawnCounter <= 0)
+        if (obstacleCounter <= 0)
         {
-            tileController.SpawnObstacle(obstaclePrefab);
-            spawnCounter = ResetCounter(spawnDistance);
+            tileController.SpawnObstacle();
+            obstacleCounter = ResetCounter(obstacleDistance);
         }
     }
 
@@ -60,13 +57,14 @@ public class TrackGenerator : MonoBehaviour
     public void GenerateTile()
     {
         // Sets the next tile to generate.
-        int index = Random.Range(0, trackTiles.Length);
+        int chance = Random.Range(0, trackTiles.Length);
+        int index = chance % trackTiles.Length;
         nextTile = trackTiles[index];
 
         direction = 0;
 
         // 0 = straight line, 1 curve
-        if (index != 0) SetCurve();
+        if (chance != 0) SetCurve();
 
         SpawnTile();
     }
@@ -121,6 +119,6 @@ public class TrackGenerator : MonoBehaviour
         angle += direction * 90;
 
         // Lower the counter, only street tracks may have obstacles
-        spawnCounter--;
+        obstacleCounter--;
     }
 }

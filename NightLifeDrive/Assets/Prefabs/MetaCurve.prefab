@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6598106120385679230}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -2, y: 1, z: 2}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5607277256599679449}
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a372e5ad55837745a4c78be1d45e179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSpawner: {fileID: 6123604669929058669}
 --- !u!65 &3760433018663781043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -945,6 +946,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3856990744794393909, guid: 8e4fedb4e037de9429dd224802c809a3, type: 3}
   m_PrefabInstance: {fileID: 1167016684502869686}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6164515807480338521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5025684077414072047, guid: 8e4fedb4e037de9429dd224802c809a3, type: 3}
+  m_PrefabInstance: {fileID: 1167016684502869686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6123604669929058669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164515807480338521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236b6b718629b4478265590b2edb560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefab: {fileID: 4621469832154968300, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
 --- !u!1001 &1949474928845733961
 PrefabInstance:
   m_ObjectHideFlags: 0

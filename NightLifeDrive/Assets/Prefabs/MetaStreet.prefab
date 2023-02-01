@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a372e5ad55837745a4c78be1d45e179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackGenerator: {fileID: 8834117994656207397, guid: 606dbc69d2769ca4c9efe98b34cc42bd, type: 3}
+  obstacleSpawner: {fileID: 3435428314920660992}
 --- !u!65 &8804143725579971932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -518,6 +518,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3856990744794393909, guid: 8e4fedb4e037de9429dd224802c809a3, type: 3}
   m_PrefabInstance: {fileID: 3926674776527647830}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8340817062065638073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5025684077414072047, guid: 8e4fedb4e037de9429dd224802c809a3, type: 3}
+  m_PrefabInstance: {fileID: 3926674776527647830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3435428314920660992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340817062065638073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236b6b718629b4478265590b2edb560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefab: {fileID: 4621469832154968300, guid: 17ef540696c0508479d0fc18c9193ce3, type: 3}
 --- !u!1001 &3926674777015762201
 PrefabInstance:
   m_ObjectHideFlags: 0
