@@ -51,6 +51,10 @@ public class LooseLife : MonoBehaviour
             //Material Effect
             carM.GetComponent<Renderer>().material = blinkMaterial;
             Game.health.setHealth(Game.health.getHealth()-1);
+
+            // Animate hit
+            gameObject.GetComponent<ParticleSystem>().Play();
+
             // Pause the execution of this function for "duration" seconds.
             yield return new WaitForSeconds(durationPerBlink);
             // After the pause, swap back to the original material.

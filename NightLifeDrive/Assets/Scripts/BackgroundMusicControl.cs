@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -13,7 +12,6 @@ public class BackgroundMusicControl : MonoBehaviour
 
     private AudioSource audioSource; 
     private int trackNumber = 0;
-    //[SerializeField] private AudioClip[] audioClipArray;
 
     [SerializeField] private Song[] songArray;
 
@@ -21,30 +19,20 @@ public class BackgroundMusicControl : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        //TODO: Shuffle Playlist here (or don't)
         ShufflePlaylist(songArray);
-        //Idea -> start at a randomized start
         StartCoroutine(loopMusic(audioSource));
     }
 
     private IEnumerator loopMusic(AudioSource audio) {
         while (true) {
-            //audio.clip = audioClipArray[trackNumber];
             audio.clip = songArray[trackNumber].file;
             songTitle.text = songArray[trackNumber].name;
             StartCoroutine(animateSong());
             audio.Play();
 
-            //yield return null;
             yield return new WaitForSeconds(audio.clip.length);
 
             trackNumber++;
-
-            /*if (trackNumber >= audioClipArray.Length) {
-            {
-                    trackNumber = 0;
-            }*/
-
             trackNumber %= songArray.Length;
         }
     }
