@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5257089963205528539}
   - component: {fileID: 2005269128750447887}
   m_Layer: 0
-  m_Name: MiniSide
+  m_Name: TileSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

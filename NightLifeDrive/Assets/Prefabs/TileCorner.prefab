@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2000624033048303668}
   - component: {fileID: 417075120220400340}
   m_Layer: 0
-  m_Name: MiniCorner
+  m_Name: TileCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
