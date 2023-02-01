@@ -2,6 +2,10 @@ using UnityEngine;
 
 /// <summary>
 /// A simple track generator for an endless racer game.
+/// Inspired by these videos, but improved the math due
+/// to much simpler predefined rectangular track pieces:
+/// https://www.youtube.com/watch?v=p1odc--Ephk
+/// https://www.youtube.com/watch?v=mHn6kZ6qcM0
 /// </summary>
 public class TrackGenerator : MonoBehaviour
 {
