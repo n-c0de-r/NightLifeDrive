@@ -17,6 +17,7 @@ public class Game : MonoBehaviour
 
     public static Health health = new Health();
 
+    private float highscore = 0;
     private float points;
     private float counterMultiplier;
     private float minMultiplier = 0.1f;
@@ -87,6 +88,7 @@ public class Game : MonoBehaviour
         }
 
         scoreText.text = points.ToString().Split(",")[0];
+        if(highscore<points) PlayerPrefs.SetFloat("highscore", points);
     }
 
     private IEnumerator End(){
