@@ -8,7 +8,7 @@ public class TileController : MonoBehaviour
     [SerializeField]
     private SpawnObstacle obstacleSpawner;
 
-    private const int DELETE_TIME = 60;
+    private const int DELETE_TIME = 180;
 
     /// <summary>
     /// Spawns an obstacle at certain predefined positions.

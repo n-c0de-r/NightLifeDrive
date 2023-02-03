@@ -5,36 +5,50 @@ using TMPro;
 [RequireComponent(typeof(AudioSource))]
 public class BackgroundMusicControl : MonoBehaviour
 {
+    [SerializeField] private Song[] songArray;
+
     [SerializeField] private TMP_Text songTitle;
     [SerializeField] private Animator songAnimation;
 
     [SerializeField] private int displayDelay = 3;
 
     private AudioSource audioSource; 
-    private int trackNumber = 0;
-
-    [SerializeField] private Song[] songArray;
+    private int songNumber = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         ShufflePlaylist(songArray);
-        StartCoroutine(loopMusic(audioSource));
+        PlaySong(songArray[songNumber]);
     }
 
-    private IEnumerator loopMusic(AudioSource audio) {
-        while (true) {
-            audio.clip = songArray[trackNumber].file;
-            songTitle.text = songArray[trackNumber].name;
-            StartCoroutine(animateSong());
-            audio.Play();
+    void Update()
+    {
+        if (!audioSource.isPlaying) NextSong();
+    }
 
-            yield return new WaitForSeconds(audio.clip.length);
+    /// <summary>
+    /// Gets the next song in the list and plays it.
+    /// </summary>
+    private void NextSong()
+    {
+        songNumber++;
+        songNumber %= songArray.Length;
 
-            trackNumber++;
-            trackNumber %= songArray.Length;
-        }
+        PlaySong(songArray[songNumber]);
+    }
+
+    /// <summary>
+    /// Plays a given song object.
+    /// </summary>
+    /// <param name="song">The Song to play.</param>
+    private void PlaySong(Song song)
+    {
+        audioSource.clip = song.file;
+        songTitle.text = song.name;
+        StartCoroutine(animateSong());
+        audioSource.Play();
     }
 
     /// <summary>
@@ -56,6 +70,11 @@ public class BackgroundMusicControl : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Shows the currently played title in an info box.
+    /// Basically just switches Animation triggers.
+    /// </summary>
+    /// <returns>A delay time for the display animation.</returns>
     IEnumerator animateSong()
     {
         songAnimation.SetBool("isShowing", true);
