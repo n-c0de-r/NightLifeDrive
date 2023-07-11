@@ -1,6 +1,6 @@
 # NightLifeDrive
 
-Forked from [U-Knights](https://github.com/U-Knights).
+Forked from [U-Knights](https://github.com/U-Knights). To play, download the ZIP file from the "Releases" section.
 
 [See here](https://github.com/U-Knights/U-Knights/blob/main/NightLifeDrive.md) for more information in German.
 
