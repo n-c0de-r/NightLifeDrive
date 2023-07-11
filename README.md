@@ -1,5 +1,9 @@
 # NightLifeDrive
 
+Forked from [U-Knights](https://github.com/U-Knights).
+
+[See here](https://github.com/U-Knights/U-Knights/blob/main/NightLifeDrive.md) for more information in German.
+
 ## Idea
 
 The idea was to have a relaxed game without too much of a challenge or competition, just to enjoy the visual style, the snythwave music and the overall 80s vibe.
@@ -38,7 +42,3 @@ The idea was to have a relaxed game without too much of a challenge or competiti
 
 ---
 ![NightLifeDrive Gif animation](./images/NightLifeDrive_show.gif)
-
-Forked from [U-Knights](https://github.com/U-Knights).
-
-[See here](https://github.com/U-Knights/U-Knights/blob/main/NightLifeDrive.md) for more information in German.
